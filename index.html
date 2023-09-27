@@ -1,0 +1,47 @@
+<html>
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXXX');</script>
+  <!-- End Google Tag Manager -->
+
+  <title>Basic WebViewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+
+<!-- Import WebViewer as a script tag -->
+<script src='./lib/webviewer.min.js'></script>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div id='viewer' style='width: 1024px; height: 600px; margin: 0 auto;'></div>
+
+  <script>
+    WebViewer({
+      path: './lib', // path to the Apryse 'lib' folder on your server
+      initialDoc: 'https://pdftron.s3.amazonaws.com/downloads/pl/webviewer-demo.pdf',
+      // initialDoc: '/path/to/my/file.pdf', // You can also use documents on your server
+    }, document.getElementById('viewer'))
+    .then(instance => {
+      const { documentViewer, annotationManager } = instance.Core;
+
+      // call methods from instance, documentViewer and annotationManager as needed
+
+      // you can also access major namespaces from the instance as follows:
+      // const Tools = instance.Core.Tools;
+      // const Annotations = instance.Core.Annotations;
+
+      documentViewer.addEventListener('documentLoaded', () => {
+        // call methods relating to the loaded document
+      });
+    });
+  </script>
+</body>
+</html>
