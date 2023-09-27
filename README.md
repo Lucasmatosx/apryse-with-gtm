@@ -2,7 +2,7 @@
 
 * Node version: 18.17.0
 * NPM version: 9.6.7
-* Windows version: 22H2 Compilation 19045.3448
+* Windows version: 10 22H2 Compilation 19045.3448
 * Chrome Version: 117.0.5938.92 (Official version) 64 bits
 
 # STEP BY STEP
