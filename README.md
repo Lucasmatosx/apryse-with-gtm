@@ -9,9 +9,6 @@
 
 * Clone the project
 
-* **IMPORTANT** Add your GTM key here:
-    ![App Screenshot](https://i.imgur.com/3RqOUT9.png)
-
 * npm install -g http-server
 
 * http-server -a localhost
